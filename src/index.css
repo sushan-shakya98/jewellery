@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply font-sans text-charcoal bg-cream-light m-0 p-0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-charcoal-dark leading-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  p {
+    @apply text-base leading-relaxed;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 md:px-6 lg:px-8 mx-auto max-w-7xl;
+  }
+  
+  .btn {
+    @apply inline-block px-6 py-3 rounded transition-all duration-300 font-medium text-sm;
+  }
+  
+  .btn-primary {
+    @apply bg-gold text-white hover:bg-gold-dark;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border border-gold text-gold hover:bg-gold hover:text-white;
+  }
+
+  .section-title {
+    @apply text-center mb-12;
+  }
+
+  .section-title h2 {
+    @apply relative inline-block font-serif font-medium;
+  }
+
+  .section-title h2:after {
+    content: '';
+    @apply block w-24 h-px bg-gold mx-auto mt-4;
+  }
+
+  .nav-link {
+    @apply relative text-charcoal hover:text-gold transition-colors duration-300 px-3 py-2;
+  }
+
+  .nav-link:after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300;
+  }
+
+  .nav-link:hover:after {
+    @apply w-full;
+  }
+
+  .product-card {
+    @apply bg-white rounded-sm shadow-elegant overflow-hidden transition-all duration-300 hover:shadow-elegant-hover;
+  }
+
+  .product-card:hover img {
+    @apply scale-105;
+  }
+
+  .product-card img {
+    @apply transition-transform duration-500;
+  }
+}
